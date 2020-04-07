@@ -1,8 +1,6 @@
-// https://stackoverflow.com/a/44992967
-// gcc -o xclipwatch xclipwatch.c -lX11 -lXfixes
-
+#include <napi.h>
 #include <X11/extensions/Xfixes.h>
-#include<stdio.h>
+#include <stdio.h>
 #include <assert.h>
 
 void WatchSelection(Display *display, Window window, const char *bufname)
@@ -27,12 +25,23 @@ void WatchSelection(Display *display, Window window, const char *bufname)
   }
 }
 
-int main(){
+Napi::Boolean listenToClipboard(const Napi::CallbackInfo& info) {
+  Napi::Env env = info.Env();
   Display *display = XOpenDisplay(NULL);
   Window window = DefaultRootWindow(display);
-  // WatchSelection(display,window,"PRIMARY");
   WatchSelection(display,window,"CLIPBOARD");
   XDestroyWindow(display, window);
   XCloseDisplay(display);
-  return 0;
+  return Napi::Boolean::New(env,true);
 }
+
+Napi::Object init(Napi::Env env, Napi::Object exports) {
+    exports.Set(Napi::String::New(env, "listenToClipboard"), Napi::Function::New(env, listenToClipboard));
+    return exports;
+};
+
+NODE_API_MODULE(myAddon, init);
+
+// https://stackoverflow.com/a/44992967
+// https://github.com/cdown/clipnotify
+// https://stackoverflow.com/a/28020536
