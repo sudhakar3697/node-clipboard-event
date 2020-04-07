@@ -8,7 +8,7 @@ Note:
 Usage
 
 ```
-const clipboardListener = require('clipboard-change');
+const clipboardListener = require('clipboard-event');
 
 // To start listening
 clipboardListener.startListening();
