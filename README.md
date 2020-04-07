@@ -3,7 +3,7 @@ Clipboard change event for Node.js/Electron.js/NW.js
 
 Note:
 * It's not being polled
-* This implementation is based on child_process. A native node module using N-API is being developed.
+* [This implementation is based on child_process. A native node module using N-API is being developed.](https://github.com/sudhakar3697/node-clipboard-event/tree/v2)
 
 Usage
 
