@@ -14,7 +14,7 @@ class ClipboardEventListener extends EventEmitter {
     if (platform === 'win32') {
       this.child = execFile(path.join(__dirname, 'platform/clipboard-event-handler-win32.exe'));
     }
-    else if(platform === 'linux'){
+    else if (platform === 'linux') {
       this.child = execFile(path.join(__dirname, 'platform/clipboard-event-handler-linux'));
     }
     else {
@@ -36,3 +36,18 @@ class ClipboardEventListener extends EventEmitter {
 }
 
 module.exports = new ClipboardEventListener();
+
+// Sample usage
+/*
+const clipboardListener = require('clipboard-event');
+
+// To start listening
+clipboardListener.startListening();
+
+clipboardListener.on('change', () => {
+  console.log('Clipboard changed');
+});
+
+// To stop listening
+clipboardListener.stopListening();
+*/
