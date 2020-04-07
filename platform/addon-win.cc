@@ -14,10 +14,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 	switch (message)
 	{
 	case WM_CLIPBOARDUPDATE:
-		MessageBox(
-			NULL, "Clipboard changed",
-			"Clipboard notifications",
-			0x00000000L);
+	std::cout<<"CLIPBOARD_CHANGE\n";
+		// MessageBox(
+		// 	NULL, "Clipboard changed",
+		// 	"Clipboard notifications",
+		// 	0x00000000L);
 		break;
 	default:
 		return DefWindowProc(hWnd, message, wParam, lParam);

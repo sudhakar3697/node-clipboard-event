@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/sudhakar3697/node-clipboard-event/issues"
   },
-  "homepage": "https://github.com/sudhakar3697/node-clipboard-event#readme"
+  "homepage": "https://github.com/sudhakar3697/node-clipboard-event#readme",
+  "dependencies": {
+    "node-addon-api": "^2.0.0"
+  }
 }
