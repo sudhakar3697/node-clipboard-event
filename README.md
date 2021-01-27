@@ -27,13 +27,9 @@ Motivation
 * https://github.com/DoumanAsh/clipboard-master
 * https://github.com/aweinstock314/rust-clipboard/issues/48
 
-## MAC Support (TO DO)
-
-* http://www.alecjacobson.com/weblog/?p=2376
-* https://gist.github.com/Daemon-Devarshi/13efd24f027a775ee862
-* https://developer.apple.com/documentation/appkit/nspasteboard?language=occ
-
 Credits
 
 * Linux-  https://stackoverflow.com/a/44992967
 * Windows- https://gist.github.com/glombard/7986317 & https://stackoverflow.com/questions/17762037/error-while-trying-to-copy-string-to-clipboard
+* MAC- http://www.alecjacobson.com/weblog/?p=2376 & https://gist.github.com/Daemon-Devarshi/13efd24f027a775ee862 & https://developer.apple.com/documentation/appkit/nspasteboard?language=occ
+
