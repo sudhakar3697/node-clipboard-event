@@ -17,6 +17,9 @@ class ClipboardEventListener extends EventEmitter {
     else if (platform === 'linux') {
       this.child = execFile(path.join(__dirname, 'platform/clipboard-event-handler-linux'));
     }
+    else if (platform === 'darwin') {
+      this.child = execFile(path.join(__dirname, 'platform/clipboard-event-handler-mac'));
+    }
     else {
       throw 'Not yet supported';
     }
