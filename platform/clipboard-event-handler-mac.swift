@@ -1,6 +1,5 @@
 //
-//  main.swift
-//  clipboard-event-handler-mac
+//  clipboard-event-handler-mac.swift
 //
 //  Created by Joonhee Lee on 2021/01/27.
 //
