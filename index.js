@@ -1,6 +1,8 @@
-const { EventEmitter } = require('events');
-const path = require('path');
-const { execFile } = require('child_process');
+import { EventEmitter } from 'events';
+import path from 'path'
+import { execFile } from 'child_process';
+import {fileURLToPath} from 'node:url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 class ClipboardEventListener extends EventEmitter {
   constructor() {
@@ -12,13 +14,13 @@ class ClipboardEventListener extends EventEmitter {
 
     const { platform } = process;
     if (platform === 'win32') {
-      this.child = execFile(path.join(__dirname, 'platform/clipboard-event-handler-win32.exe'));
+      this.child = execFile(path.join(__dirname,'platform/clipboard-event-handler-win32.exe'));
     }
     else if (platform === 'linux') {
-      this.child = execFile(path.join(__dirname, 'platform/clipboard-event-handler-linux'));
+      this.child = execFile(path.join(__dirname,'platform/clipboard-event-handler-linux'));
     }
     else if (platform === 'darwin') {
-      this.child = execFile(path.join(__dirname, 'platform/clipboard-event-handler-mac'));
+      this.child = execFile(path.join(__dirname,'platform/clipboard-event-handler-mac'));
     }
     else {
       throw 'Not yet supported';
@@ -38,7 +40,7 @@ class ClipboardEventListener extends EventEmitter {
   }
 }
 
-module.exports = new ClipboardEventListener();
+export default new ClipboardEventListener();
 
 // Sample usage
 /*
