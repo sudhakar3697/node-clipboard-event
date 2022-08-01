@@ -10,6 +10,9 @@ Usage
 ```
 import clipboardListener from 'clipboard-event'
 
+// In case of CommonJS
+// const clipboardListener = require('clipboard-event');
+
 // To start listening
 clipboardListener.startListening();
 

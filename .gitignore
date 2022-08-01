@@ -1,5 +1,6 @@
 node_modules/
 package-lock.json
 test.js
+test.cjs
 platform/build
 .DS_Store
