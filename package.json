@@ -18,6 +18,11 @@
   ],
   "author": "sudhakar3697 <sudax3@gmail.com>",
   "license": "MIT",
+  "exports": {
+    "import": "./index.js",
+    "require": "./index.cjs"
+  },
+  "type": "module",
   "bugs": {
     "url": "https://github.com/sudhakar3697/node-clipboard-event/issues"
   },

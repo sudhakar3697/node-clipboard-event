@@ -8,7 +8,7 @@ Note:
 Usage
 
 ```
-const clipboardListener = require('clipboard-event');
+import clipboardListener from 'clipboard-event'
 
 // To start listening
 clipboardListener.startListening();
