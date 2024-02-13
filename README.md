@@ -16,7 +16,7 @@ The motivation for creating this open project was these:
 import ClipboardListener from 'EventClipboard'
 
 // In case of CommonJS
-// const clipboardListener = require('ClipboardEvent');
+// const ClipboardListener = require('ClipboardEvent');
 
 // To start listening
 ClipboardListener.startListening();
@@ -28,6 +28,12 @@ ClipboardListener.on('change', () => {
 // To stop listening
 ClipboardListener.stopListening();
 ```
+
+- Access `node_modules/clipboard-event/plataform` and run the following command to give execution permission for files from your OS:
+```bash
+chmod +x <filename>
+```
+
 
 ## Credits
 
